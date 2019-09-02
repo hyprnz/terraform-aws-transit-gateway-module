@@ -22,3 +22,12 @@ The only supported means of accepting a shared attachment from another account i
 | tags | A map of tags to add to all resources | map | `<map>` | no |
 | tgw\_tags | Additional tags for the transit gateway | map | `<map>` | no |
 
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| arn | The ARN of the transit Gateway |
+| default\_route\_table\_id | The default route table associated with the Transit Gateway |
+| id | The ID of the Transit Gateway |
+| ram\_resource\_share\_id | The id of the RAM resource share |
+
