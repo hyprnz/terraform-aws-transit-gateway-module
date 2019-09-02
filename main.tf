@@ -3,63 +3,31 @@ locals {
 }
 
 resource "aws_ec2_transit_gateway" "this" {
-  auto_accept_shared_attachments = "enable"
+  description                     = "${var.description}"
+  auto_accept_shared_attachments  = "${var.auto_accept_shared_attachments}"
+  default_route_table_association = "${var.default_route_table_association}"
+  default_route_table_propagation = "${var.default_route_table_propagation}"
 
-  tags = {
-    Name        = "${var.name}",
-    Environment = "${var.environment}"
-  }
+  tags = "${merge(map("Name", format("%s", var.name)), var.tgw_tags, var.tags )}"
 }
 
 resource "aws_ram_resource_share" "this" {
   count = "${local.requires_ram_share}"
-  name = "terraform-tgw-share"
+  name  = "terraform-tgw-share"
 
-  tags = {
-    Name        = "${var.name}",
-    Environment = "${var.environment}"
-  }
+  tags = "${merge(map("Name", format("%s", var.name)), var.ram_resource_share_tags, var.tags )}"
 }
 
 // Share the transit gateway...
 resource "aws_ram_resource_association" "this" {
-  count = "${local.requires_ram_share}"
+  count              = "${local.requires_ram_share}"
   resource_arn       = "${aws_ec2_transit_gateway.this.arn}"
   resource_share_arn = "${aws_ram_resource_share.this.id}"
 }
 
 // ...with the second account.
 resource "aws_ram_principal_association" "this" {
-  count = "${local.requires_ram_share}"
-  principal          = "${var.connecting_aws_account_numbers}"
+  count              = "${local.requires_ram_share}"
+  principal          = "${element(var.connecting_aws_account_numbers, count.index)}"
   resource_share_arn = "${aws_ram_resource_share.this.id}"
 }
-
-
-# // Create the VPC attachment in the second account...
-# resource "aws_ec2_transit_gateway_vpc_attachment" "this" {
-#   provider = "vpc/vpn-target-account"
-
-#   depends_on = ["aws_ram_principal_association.this", "aws_ram_resource_association.this"]
-
-#   subnet_ids         = "${var.target_vpc_subnet_ids}"
-#   transit_gateway_id = "${aws_ec2_transit_gateway.this.id}"
-#   vpc_id             = "${var.target_vpc_id}"
-
-#   tags = {
-#     Name = "${var.name}"
-#     Side = "Creator"
-#   }
-# }
-
-# // ...and accept it in the first account.
-# resource "aws_ec2_transit_gateway_vpc_attachment_accepter" "example" {
-#   provider = "aws.tg-target-account"
-
-#   transit_gateway_attachment_id = "${aws_ec2_transit_gateway_vpc_attachment.this.id}"
-
-#   tags = {
-#     Name = "${var.name}"
-#     Side = "Accepter"
-#   }
-# }
