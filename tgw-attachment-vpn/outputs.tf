@@ -8,7 +8,7 @@ output "vpn_id" {
   value       = "${aws_vpn_connection.tgw.id}"
 }
 
-output "tgw-vpn_attachment_route_table_id" {
+output "tgw_vpn_attachment_route_table_id" {
   description = "The route table id"
   value       = "${aws_ec2_transit_gateway_route.this.id}"
 }

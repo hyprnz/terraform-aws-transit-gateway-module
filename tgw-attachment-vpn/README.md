@@ -18,7 +18,7 @@ and adds any static routes accessible over the VPN link.
 
 | Name | Description |
 |------|-------------|
-| tgw-vpn\_attachment\_route\_table\_id | The route table id |
+| tgw_vpn\_attachment\_route\_table\_id | The route table id |
 | tgw\_vpn\_attachment\_id | The attachment id |
 | tgw\_vpn\_attachment\_route\_table\_association\_id | The attachment to route table association id |
 | vpn\_id | The VPN connection id |
