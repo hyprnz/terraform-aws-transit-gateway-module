@@ -8,6 +8,11 @@ RAM Sharing needs to be supported in the root account before creating the `aws_r
 
 The only supported means of accepting a shared attachment from another account is by setting the `auto_accept_shared_attachments` to `enable`
 
+This repo contains other related modules for creating resources that integrate with a TGW.
+
+* [Customer Gateway](customer-gateway/README.md)
+* [Transit Gateway VPN Attachment](tgw-attachment-vpn/README.md)
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
