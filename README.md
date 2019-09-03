@@ -11,7 +11,7 @@ The only supported means of accepting a shared attachment from another account i
 This repo contains other related modules for creating resources that integrate with a TGW.
 
 * [Customer Gateway](customer-gateway/README.md)
-* [Transit Gateway VPN Attachment](tgw-attachment-vpn/README.md)
+* [Transit Gateway VPN Attachment](tgw-vpn-attachment/README.md)
 
 ## Inputs
 
