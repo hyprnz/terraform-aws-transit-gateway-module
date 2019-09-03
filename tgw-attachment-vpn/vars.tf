@@ -11,7 +11,7 @@ variable "transit_gateway_id" {
 }
 
 variable "tags" {
-  description = "Aditional tags for all vpn-attachment resources"
+  description = "Additional tags for all vpn-attachment resources"
   default     = {}
 }
 
