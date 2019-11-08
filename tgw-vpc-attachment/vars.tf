@@ -1,3 +1,7 @@
+variable "name" {
+  description = "Name of Tranist Gateway Attachment resource"
+}
+
 variable "vpc_subnet_ids" {
   description = "A list of subnets for routing via the Transit Gateway Attachment. Can only be 1 subnet per AZ"
   type        = "list"

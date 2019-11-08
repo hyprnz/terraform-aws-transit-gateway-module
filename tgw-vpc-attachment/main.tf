@@ -9,5 +9,5 @@ resource "aws_ec2_transit_gateway_vpc_attachment" "this" {
   dns_support  = "${var.dns_support}"
   ipv6_support = "${var.ipv6_support}"
 
-  tags = "${var.tags}"
+  tags = "${merge(map("Name", var.name), var.tags)}"
 }
