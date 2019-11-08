@@ -8,8 +8,6 @@ RAM Sharing needs to be supported in the root account before creating the `aws_r
 
 The only supported means of accepting a shared attachment from another account is by setting the `auto_accept_shared_attachments` to `enable`, otherwise an additional process outside of Terraform would be required.
 
-## Module Details
-
 ## Inputs
 
 | Name | Description | Type | Default | Required |

@@ -6,8 +6,6 @@ A Transit Gateway attachment is then associated with a Transit Gateway Route Tab
 
 As a Transit Gateway can be shared cross account and associated cross account implementation details this module will not create/associate any Transit Gateway Route Tables.
 
-## Module Details
-
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -25,5 +23,5 @@ As a Transit Gateway can be shared cross account and associated cross account im
 
 | Name | Description |
 |------|-------------|
-| transit\_gateway\_attachment\_id | The id of the ransit Gateway VPC Attachment |
+| transit\_gateway\_attachment\_id | The id of the transit Gateway VPC Attachment |
 
