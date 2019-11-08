@@ -1,9 +1,9 @@
 variable "name" {
-  description = "Name tag for the Tranist Gateway"
+  description = "Name tag for the Transit Gateway"
 }
 
 variable "transit_gateway_id" {
-  description = "The Tranist Gateway id"
+  description = "The Transit Gateway id"
 }
 
 variable "transit_gateway_attachment_id" {
