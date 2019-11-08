@@ -4,7 +4,7 @@ This module provisions a Transit Gateway and configures any resource sharing req
 
 If `connecting_aws_account_numbers` is not specified, no RAM sharing options will be configured.
 
-RAM Sharing needs to be supported in the root account before creating the `aws_ram_principal_association` resource. See the (docs)[https://docs.aws.amazon.com/ram/latest/userguide/getting-started-sharing.html#getting-started-sharing-orgs] on how to configure this in the root AWS organisation account. Currently this cannot be set via Terraform.
+RAM Sharing needs to be supported in the root account before creating the `aws_ram_principal_association` resource. See the [docs](https://docs.aws.amazon.com/ram/latest/userguide/getting-started-sharing.html#getting-started-sharing-orgs) on how to configure this in the root AWS organisation account. Currently this cannot be set via Terraform.
 
 The only supported means of accepting a shared attachment from another account is by setting the `auto_accept_shared_attachments` to `enable`, otherwise an additional process outside of Terraform would be required.
 
