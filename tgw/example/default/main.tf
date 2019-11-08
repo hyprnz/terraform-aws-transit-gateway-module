@@ -18,8 +18,7 @@ variable "aws_region" {
   default = "ap-southeast-2"
 }
 
-variable "aws_account_number" {
-}
+variable "aws_account_number" {}
 
 output "tgw-arn" {
   value = "${module.example.arn}"
@@ -28,5 +27,3 @@ output "tgw-arn" {
 output "tgw-id" {
   value = "${module.example.id}"
 }
-
-

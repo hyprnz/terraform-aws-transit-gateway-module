@@ -31,5 +31,3 @@ output "tgw-arn" {
 output "tgw-id" {
   value = "${module.example.id}"
 }
-
-
