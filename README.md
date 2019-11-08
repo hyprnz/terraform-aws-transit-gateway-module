@@ -6,6 +6,7 @@ This repo contains other related modules for creating resources that integrate w
 
 * [Customer Gateway](customer-gateway/README.md)
 * [Transit Gateway](tgw/README.md)
+* [Transit Gateway Route Table](tgw-route-table/README.md)
 * [Transit Gateway VPC Attachment](tgw-vpc-attachment/README.md)
 * [Transit Gateway VPN Attachment](tgw-vpn-attachment/README.md)
 
