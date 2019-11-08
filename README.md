@@ -11,7 +11,7 @@ This repo contains other related modules for creating resources that integrate w
 
 ### Required configuration for cross VPC routing
 
-Below is a list of resources and configurations that need to be completed in order to provide cross VPC (including VPC's in other AWS accounts) routing. Most of these resources are not included in this repo
+Below is a list of resources and configurations that need to be completed in order to provide cross VPC (including VPC's in other AWS accounts) routing. Some of these resources are not included in this repo
 
 1. A Transit Gateway
 1. A Transit Gateway VPC Attachment - binds a VPC to a Transit Gateway
