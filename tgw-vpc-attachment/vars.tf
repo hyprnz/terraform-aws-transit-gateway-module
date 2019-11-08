@@ -4,7 +4,7 @@ variable "vpc_subnet_ids" {
 }
 
 variable "transit_gateway_id" {
-  description = "The id of the Transit Gateway the Attahcment should bind to"
+  description = "The id of the Transit Gateway the Attachment should bind to"
 }
 
 variable "vpc_id" {
@@ -15,6 +15,7 @@ variable "create_default_route_table_association" {
   description = "Whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`."
   default     = true
 }
+
 variable "create_default_route_table_propagation" {
   description = "Whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: true."
   default     = true
@@ -35,5 +36,3 @@ variable "tags" {
   type        = "map"
   default     = {}
 }
-
-
