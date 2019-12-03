@@ -41,3 +41,4 @@ variable "ram_resource_share_tags" {
   description = "Additional tags for the Resource Share"
   default     = {}
 }
+

@@ -17,10 +17,11 @@ variable "tags" {
 
 variable "cdir_subnets_for_static_routes" {
   description = "A list of cdirs subnets to be routed over the vpn connection"
-  type        = "list"
+  type        = list(string)
 }
 
 variable "enable_static_routes_only" {
   description = "If the VPN connection should use static routing only"
   default     = false
 }
+

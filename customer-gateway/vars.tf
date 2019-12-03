@@ -20,3 +20,4 @@ variable "tags" {
   description = "Additional tags for the CGW"
   default     = {}
 }
+

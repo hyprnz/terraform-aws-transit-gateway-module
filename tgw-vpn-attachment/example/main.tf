@@ -2,23 +2,24 @@ module "example" {
   source = "../"
 
   providers = {
-    aws = "aws"
+    aws = aws
   }
 
   name = "example-vpn-attachment"
 
-  transit_gateway_id  = "tgw-0987654321"
-  customer_gateway_id = "cgw-1234567890"
+  transit_gateway_id  = "tgw-09bc6fe34e2600cbd"
+  customer_gateway_id = "cgw-0ad0471c2ae86011e"
 
   enable_static_routes_only = true
 
   cdir_subnets_for_static_routes = ["172.20.0.0/16"]
 
-  tags = "${map( "Type", "example")}"
+  tags = {
+    "Type" = "example"
+  }
 }
 
 variable "aws_region" {
   default = "ap-southeast-2"
 }
 
-variable "aws_account_number" {}

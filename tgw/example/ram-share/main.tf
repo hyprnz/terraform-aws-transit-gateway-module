@@ -9,7 +9,7 @@ module "example" {
   description = "An Example TGW via Terraform"
   tags        = "${map("Environment", format("%s", "stage"))}"
 
-  connecting_aws_account_numbers = ["1234567890"]
+  connecting_aws_account_numbers = ["${var.aws_account_number}"]
 
   auto_accept_shared_attachments  = "enable"
   default_route_table_association = "disable"

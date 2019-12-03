@@ -4,7 +4,7 @@ variable "name" {
 
 variable "vpc_subnet_ids" {
   description = "A list of subnets for routing via the Transit Gateway Attachment. Can only be 1 subnet per AZ"
-  type        = "list"
+  type        = list(string)
 }
 
 variable "transit_gateway_id" {
@@ -37,6 +37,7 @@ variable "ipv6_support" {
 
 variable "tags" {
   description = "a map of tags to add to Attachment Resource"
-  type        = "map"
+  type        = map(string)
   default     = {}
 }
+
