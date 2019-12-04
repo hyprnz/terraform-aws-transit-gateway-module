@@ -1,10 +1,6 @@
 module "example" {
   source = "../../"
 
-  providers = {
-    aws = aws
-  }
-
   name        = "example-tgw"
   description = "An Example TGW via Terraform"
   tags = {
