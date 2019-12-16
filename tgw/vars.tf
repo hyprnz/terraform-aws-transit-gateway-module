@@ -9,6 +9,7 @@ variable "description" {
 
 variable "connecting_aws_account_numbers" {
   description = "The AWS account numbers to share the transit gateway with. Should exclude the account number where the transit gateway is being provisioned"
+  type = list(string)
   default     = []
 }
 
