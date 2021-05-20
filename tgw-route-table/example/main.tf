@@ -22,9 +22,16 @@ module "example" {
       attachment_id = "tgw-attach-0987654321def"
     },
   ]
+}
 
-  tags = {
-    "Environment" = "stage"
+provider "aws" {
+  region = var.aws_region
+
+  default_tags {
+    tags = {
+      Environment      = "example-stage",
+      "Resource Owner" = "Example Tranist Gateway Route Table"
+    }
   }
 }
 

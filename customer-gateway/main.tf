@@ -10,4 +10,3 @@ resource "aws_customer_gateway" "this" {
     var.tags,
   )
 }
-

@@ -17,7 +17,7 @@ variable "transit_gateway_propagate_attachment_ids" {
 }
 
 variable "transit_gateway_static_routes" {
-  description = "A list of key value pairs containing the cidr blcook and the attachment id route combinations"
+  description = "A list of key value pairs containing the cidr block and the attachment id route combinations"
   type        = list(object({ cidr_block = string, attachment_id = string }))
   default     = []
 }

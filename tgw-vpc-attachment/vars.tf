@@ -1,5 +1,5 @@
 variable "name" {
-  description = "Name of Tranist Gateway Attachment resource"
+  description = "Name of Transit Gateway Attachment resource"
 }
 
 variable "vpc_subnet_ids" {

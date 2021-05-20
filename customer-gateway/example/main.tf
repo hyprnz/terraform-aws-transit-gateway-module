@@ -7,16 +7,21 @@ module "example" {
 
   name       = "example-cgw"
   ip_address = "1.2.3.4"
-  tags = {
-    "Environment" = format("%s", "prod")
+}
+
+provider "aws" {
+  region = var.aws_region
+
+  default_tags {
+    tags = {
+      Environment      = "example-stage",
+      "Resource Owner" = "Example Customer Gateway"
+    }
   }
 }
 
 variable "aws_region" {
   default = "ap-southeast-2"
-}
-
-variable "aws_account_number" {
 }
 
 output "cgw_id" {
