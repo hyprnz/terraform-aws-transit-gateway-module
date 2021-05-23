@@ -20,3 +20,5 @@ Below is a list of resources and configurations that need to be completed in ord
 1. VPC routes in VPC Route Table associated with subnet - Broadcasts routes to the Transit Gateway
 1. Security groups to allow VPC cidr source ranges
 
+### TF-DOCS
+This repo uses terraform-docs version 0.13 to generate module README files. The configuration is located in the .tf-docs.yaml file and README files can be updated by running the `./update-tfdocs.sh` helper script. The `./docs/readme-footer.md` file is appended to all README files and provides documentation content that is relevant for all modules.
