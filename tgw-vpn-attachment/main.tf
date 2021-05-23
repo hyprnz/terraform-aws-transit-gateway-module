@@ -30,9 +30,9 @@ resource "aws_ec2_transit_gateway_route_table_association" "this" {
 }
 
 resource "aws_ec2_transit_gateway_route" "this" {
-  count = length(var.cdir_subnets_for_static_routes)
+  count = length(var.cidr_subnets_for_static_routes)
 
-  destination_cidr_block         = element(var.cdir_subnets_for_static_routes, count.index)
+  destination_cidr_block         = element(var.cidr_subnets_for_static_routes, count.index)
   transit_gateway_route_table_id = aws_ec2_transit_gateway_route_table.this.id
   transit_gateway_attachment_id  = data.aws_ec2_transit_gateway_vpn_attachment.this.id
 }

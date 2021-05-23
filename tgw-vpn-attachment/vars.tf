@@ -15,8 +15,8 @@ variable "tags" {
   default     = {}
 }
 
-variable "cdir_subnets_for_static_routes" {
-  description = "A list of cdirs subnets to be routed over the vpn connection"
+variable "cidr_subnets_for_static_routes" {
+  description = "A list of cidrs subnets to be routed over the vpn connection"
   type        = list(string)
 }
 

@@ -30,7 +30,7 @@ An default example of the module is located [here](example/main.tf)
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| cdir_subnets_for_static_routes | A list of cdirs subnets to be routed over the vpn connection | `list(string)` | n/a | yes |
+| cidr_subnets_for_static_routes | A list of cidrs subnets to be routed over the vpn connection | `list(string)` | n/a | yes |
 | customer_gateway_id | The customer gateway id for the VPN Connection | `any` | n/a | yes |
 | name | Name of the tgw-attachment resource | `any` | n/a | yes |
 | transit_gateway_id | The transit gateway id | `any` | n/a | yes |

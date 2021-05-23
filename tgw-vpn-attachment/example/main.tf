@@ -12,7 +12,7 @@ module "example" {
 
   enable_static_routes_only = true
 
-  cdir_subnets_for_static_routes = ["172.20.0.0/16"]
+  cidr_subnets_for_static_routes = ["172.20.0.0/16"]
 
 }
 
